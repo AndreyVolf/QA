@@ -47,6 +47,28 @@ public class SeleniumTests {
         Assert.assertEquals(expectedResult, actualResult);
         driver.quit();
     }
+   @Test
+    public void testEmptyFieldsHello(){
+       System.setProperty("webdriver.chrome.driver", "Drivers//chromedriver.exe");
+       WebDriver driver = new ChromeDriver();
+       driver.navigate().to("https://lm.skillbox.cc/qa_tester/module02/homework1/");
+       driver.findElement(By.className("custom-form__button")).click();
+       var actualResult = driver.findElement(By.className("start-screen__res")).getText();
+       var expectedResult = "Здравствуйте, .\n" +
+               "На вашу почту () отправлено письмо.\n" +
+               "Наш сотрудник свяжется с вами по телефону: .";
+       Assert.assertEquals(expectedResult, actualResult);
+       driver.quit();
+
+    }
+
+    @Test
+    public void testElement(){
+        System.setProperty("webdriver.chrome.driver", "Drivers//chromedriver.exe");
+
+    }
+
+
 
 
 }

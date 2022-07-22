@@ -1,18 +1,18 @@
-import jdk.dynalink.SecureLookupSupplier;
+package SimpleTests;
+
 import org.junit.Test;
 
-import java.time.LocalDateTime;
+import java.util.Scanner;
 
-public class Main {
-    @Test
-    public void testMain()
+public class MainNas {
+    public static  void main(String[] args)
     {
 
         System.out.println(" Система расчета стоимости топлива");
         //System.out.println(LocalDateTime.now());
-
-        int fuelType = 12;
-        int amount = 23;
+        Scanner sc = new Scanner(System.in);
+        int fuelType = sc.nextInt();
+        int amount = sc.nextInt();
 
         double fuel92price = 60.2;
         double fuel95price = 67.33;
